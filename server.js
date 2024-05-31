@@ -58,6 +58,10 @@ app.get('/', (req, res) => {
     res.send('<a href="/auth">Login with OpenID Connect</a>');
 });
 
+app.get('/ping', (req, res) => {
+    res.send('pong');
+});
+
 app.get('/auth',
     passport.authenticate('openidconnect'));
 
